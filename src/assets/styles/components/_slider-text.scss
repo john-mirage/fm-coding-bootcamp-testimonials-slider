@@ -1,0 +1,33 @@
+@use '../variables';
+
+.slider-text {
+    width: 100%;
+    height: auto;
+    padding-top: 2.4rem;
+    background-image: url("/src/assets/images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 6rem auto;
+    text-align: center;
+
+    > .paragraph {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+        color: variables.$color-dark-blue;
+        margin-bottom: 1.6rem;
+    }
+
+    > .name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: variables.$color-dark-blue;
+        margin-bottom: 0.4rem;
+    }
+
+    > .job {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: variables.$color-grayish-blue;
+    }
+}
