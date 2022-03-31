@@ -1,6 +1,8 @@
 import './assets/styles/main.scss';
 import 'swiper/scss';
-import Swiper, { Navigation, Keyboard } from 'swiper';
+import 'swiper/scss/keyboard';
+import 'swiper/scss/effect-fade';
+import Swiper, { Navigation, Keyboard, EffectFade } from 'swiper';
 
 const imageSwiper = new Swiper("#slider-image", {
     modules: [Navigation, Keyboard],
@@ -16,7 +18,12 @@ const imageSwiper = new Swiper("#slider-image", {
 });
 
 const textSwiper = new Swiper("#slider-text", {
+    modules: [EffectFade],
     allowTouchMove: false,
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true
+    },
 });
 
 imageSwiper.on("slideChange", (swiper) => textSwiper.slideTo(swiper.activeIndex));
