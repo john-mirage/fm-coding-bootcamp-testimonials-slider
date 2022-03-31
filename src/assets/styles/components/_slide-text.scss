@@ -11,7 +11,7 @@
         color: variables.$color-dark-blue;
         margin-bottom: 1.6rem;
 
-        @media screen and (min-width: variables.$screen-xl) {
+        @media screen and (min-width: variables.$screen-md) {
             font-size: 3.2rem;
             line-height: 4.4rem;
             margin-bottom: 3.2rem;
@@ -24,9 +24,13 @@
         color: variables.$color-dark-blue;
         margin-bottom: 0.4rem;
 
-        @media screen and (min-width: variables.$screen-xl) {
-            display: inline-block;
+        @media screen and (min-width: variables.$screen-md) {
             font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        @media screen and (min-width: variables.$screen-lg) {
+            display: inline-block;
             margin-right: 0.4rem;
             margin-bottom: 0;
         }
@@ -37,9 +41,12 @@
         font-weight: 500;
         color: variables.$color-grayish-blue;
 
-        @media screen and (min-width: variables.$screen-xl) {
-            display: inline-block;
+        @media screen and (min-width: variables.$screen-md) {
             font-size: 2rem;
+        }
+
+        @media screen and (min-width: variables.$screen-lg) {
+            display: inline-block;
         }
     }
 }

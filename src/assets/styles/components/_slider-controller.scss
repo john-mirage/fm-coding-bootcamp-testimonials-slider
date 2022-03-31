@@ -10,26 +10,39 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 8rem;
-    height: 4rem;
+    width: 6.4rem;
+    height: 3.2rem;
     border-radius: 9999px;
     background-color: #fff;
 
-    @media screen and (min-width: variables.$screen-lg) {
-        left: 6.4rem;
-        transform: translate(0, 50%);
+    @media screen and (min-width: variables.$screen-xs) {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    @media screen and (min-width: variables.$screen-md) {
         width: 11.2rem;
         height: 5.6rem;
     }
 
+    @media screen and (min-width: variables.$screen-lg) {
+        left: 6.4rem;
+        transform: translate(0, 50%);
+    }
+
     > .button {
         display: flex;
-        width: 4rem;
-        height: 4rem;
+        width: 3.2rem;
+        height: 3.2rem;
         transition: opacity 150ms;
         cursor: pointer;
 
-        @media screen and (min-width: variables.$screen-lg) {
+        @media screen and (min-width: variables.$screen-xs) {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        @media screen and (min-width: variables.$screen-md) {
             width: 5.6rem;
             height: 5.6rem;
         }
@@ -51,10 +64,14 @@
 
     > .button > .arrow {
         width: auto;
-        height: 1.4rem;
+        height: 1rem;
         margin: auto;
 
-        @media screen and (min-width: variables.$screen-lg) {
+        @media screen and (min-width: variables.$screen-xs) {
+            height: 1.4rem;
+        }
+
+        @media screen and (min-width: variables.$screen-md) {
             height: 1.8rem;
         }
     }
