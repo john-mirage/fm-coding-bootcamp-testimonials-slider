@@ -15,10 +15,24 @@
     border-radius: 9999px;
     background-color: #fff;
 
+    @media screen and (min-width: variables.$screen-lg) {
+        left: 6.4rem;
+        transform: translate(0, 50%);
+        width: 11.2rem;
+        height: 5.6rem;
+    }
+
     > .button {
         display: flex;
         width: 4rem;
         height: 4rem;
+        transition: opacity 150ms;
+        cursor: pointer;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            width: 5.6rem;
+            height: 5.6rem;
+        }
 
         &.-left {
             border-top-left-radius: 9999px;
@@ -39,5 +53,9 @@
         width: auto;
         height: 1.4rem;
         margin: auto;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            height: 1.8rem;
+        }
     }
 }

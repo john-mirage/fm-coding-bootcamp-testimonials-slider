@@ -4,15 +4,46 @@
     width: 100%;
     min-height: 100vh;
     padding-top: 2.4rem;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
     padding-bottom: 7.2rem;
     background-image: url("/src/assets/images/pattern-curve.svg");
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: auto 7.2rem;
 
-    > .pattern {
+    > .container {
+        width: 100%;
+        height: auto;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+
+        @media screen and (min-width: variables.$screen-sm) {
+            max-width: variables.$screen-sm;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (min-width: variables.$screen-md) {
+            max-width: variables.$screen-md;
+        }
+
+        @media screen and (min-width: variables.$screen-lg) {
+            max-width: variables.$screen-lg;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        @media screen and (min-width: variables.$screen-xl) {
+            max-width: variables.$screen-xl;
+        }
+
+        @media screen and (min-width: variables.$screen-2xl) {
+            max-width: variables.$screen-2xl;
+        }
+    }
+
+    > .container > .pattern {
         width: 100%;
         height: auto;
         padding-top: 3rem;
@@ -24,9 +55,18 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            order: 2;
+            width: 50%;
+            padding-top: 6.4rem;
+            padding-bottom: 4.4rem;
+            padding-left: 6.4rem;
+            padding-right: 9.2rem;
+        }
     }
 
-    > .pattern > .image {
+    > .container > .pattern > .image {
         position: relative;
         width: auto;
         height: auto;
@@ -35,7 +75,7 @@
         box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     }
 
-    > .text {
+    > .container > .text {
         width: 100%;
         height: auto;
         padding-top: 2.4rem;
@@ -44,5 +84,20 @@
         background-position: top center;
         background-size: 6rem auto;
         text-align: center;
+
+        @media screen and (min-width: variables.$screen-lg) {
+            order: 1;
+            width: 50%;
+            text-align: left;
+            background-position: top left 9.6rem;
+        }
+
+        @media screen and (min-width: variables.$screen-xl) {
+            order: 1;
+            width: 50%;
+            text-align: left;
+            background-size: 12rem auto;
+            padding-top: 7.2rem;
+        }
     }
 }

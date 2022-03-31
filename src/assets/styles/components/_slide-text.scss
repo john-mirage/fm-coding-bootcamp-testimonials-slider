@@ -10,6 +10,12 @@
         line-height: 2.4rem;
         color: variables.$color-dark-blue;
         margin-bottom: 1.6rem;
+
+        @media screen and (min-width: variables.$screen-xl) {
+            font-size: 3.2rem;
+            line-height: 4.4rem;
+            margin-bottom: 3.2rem;
+        }
     }
 
     > .name {
@@ -17,11 +23,23 @@
         font-weight: 700;
         color: variables.$color-dark-blue;
         margin-bottom: 0.4rem;
+
+        @media screen and (min-width: variables.$screen-xl) {
+            display: inline-block;
+            font-size: 2rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0;
+        }
     }
 
     > .job {
         font-size: 1.5rem;
         font-weight: 500;
         color: variables.$color-grayish-blue;
+
+        @media screen and (min-width: variables.$screen-xl) {
+            display: inline-block;
+            font-size: 2rem;
+        }
     }
 }

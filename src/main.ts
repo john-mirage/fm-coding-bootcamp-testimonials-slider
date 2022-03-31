@@ -4,6 +4,7 @@ import Swiper, { Navigation, Keyboard } from 'swiper';
 
 const imageSwiper = new Swiper("#slider-image", {
     modules: [Navigation, Keyboard],
+    resistanceRatio: 0,
     navigation: {
         nextEl: '#slider-image-next',
         prevEl: '#slider-image-prev',
