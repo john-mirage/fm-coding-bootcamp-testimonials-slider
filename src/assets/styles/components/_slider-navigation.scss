@@ -1,6 +1,6 @@
 @use '../variables';
 
-.slider-controller {
+.slider-navigation {
     position: absolute;
     z-index: 100;
     bottom: 0;
@@ -57,7 +57,7 @@
             border-bottom-right-radius: 9999px;
         }
 
-        &.swiper-button-disabled {
+        &.-disabled {
             opacity: 0.4;
         }
     }

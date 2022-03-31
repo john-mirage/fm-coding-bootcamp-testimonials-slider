@@ -1,25 +1,13 @@
-import './assets/styles/main.scss';
 import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/controller';
 import 'swiper/scss/keyboard';
 import 'swiper/scss/effect-fade';
-import Swiper, { Navigation, Keyboard, EffectFade } from 'swiper';
-
-const imageSwiper = new Swiper("#slider-image", {
-    modules: [Navigation, Keyboard],
-    resistanceRatio: 0,
-    grabCursor: true,
-    navigation: {
-        nextEl: '#slider-image-next',
-        prevEl: '#slider-image-prev',
-    },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-    },
-});
+import './assets/styles/main.scss';
+import Swiper, { Navigation, Keyboard, EffectFade, Controller, A11y } from 'swiper';
 
 const textSwiper = new Swiper("#slider-text", {
-    modules: [EffectFade],
+    modules: [EffectFade, A11y],
     allowTouchMove: false,
     effect: "fade",
     fadeEffect: {
@@ -27,4 +15,20 @@ const textSwiper = new Swiper("#slider-text", {
     },
 });
 
-imageSwiper.on("slideChange", (swiper) => textSwiper.slideTo(swiper.activeIndex));
+const imageSwiper = new Swiper("#slider-image", {
+    modules: [Navigation, Keyboard, Controller, A11y],
+    resistanceRatio: 0,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#slider-image-next',
+        prevEl: '#slider-image-prev',
+        disabledClass: "-disabled",
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    controller: {
+        control: textSwiper,
+    },
+});
