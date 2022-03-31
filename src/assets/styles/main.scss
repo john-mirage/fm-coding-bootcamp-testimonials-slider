@@ -1,6 +1,8 @@
 @use './globals';
 
-@use './components/page-container';
+@use './components/page-content';
 @use './components/slider-image';
 @use './components/slider-text';
 @use './components/slider-controller';
+@use './components/slide-image';
+@use './components/slide-text';

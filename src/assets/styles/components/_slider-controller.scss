@@ -2,6 +2,7 @@
 
 .slider-controller {
     position: absolute;
+    z-index: 100;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
@@ -14,7 +15,7 @@
     border-radius: 9999px;
     background-color: #fff;
 
-    > .arrow {
+    > .button {
         display: flex;
         width: 4rem;
         height: 4rem;
@@ -28,9 +29,13 @@
             border-top-right-radius: 9999px;
             border-bottom-right-radius: 9999px;
         }
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+        }
     }
 
-    > .arrow > .icon {
+    > .button > .arrow {
         width: auto;
         height: 1.4rem;
         margin: auto;

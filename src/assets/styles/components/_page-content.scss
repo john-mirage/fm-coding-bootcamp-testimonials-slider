@@ -1,0 +1,48 @@
+@use '../variables';
+
+.page-content {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 2.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 7.2rem;
+    background-image: url("/src/assets/images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 7.2rem;
+
+    > .pattern {
+        width: 100%;
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 2.4rem;
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
+        margin-bottom: 3.2rem;
+        background-image: url("./src/assets/images/pattern-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    > .pattern > .image {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+
+    > .text {
+        width: 100%;
+        height: auto;
+        padding-top: 2.4rem;
+        background-image: url("/src/assets/images/pattern-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 6rem auto;
+        text-align: center;
+    }
+}
