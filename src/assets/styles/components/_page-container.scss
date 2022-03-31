@@ -28,6 +28,8 @@
     }
 
     > .pattern {
+        position: relative;
+        z-index: 50;
         width: 100%;
         height: auto;
         padding-top: 3rem;
@@ -50,9 +52,9 @@
 
         @media screen and (min-width: variables.$screen-lg) {
             order: 2;
-            width: 55%;
+            width: calc(50% + 5.2rem);
             padding-left: 6.4rem;
-            margin-left: -5%;
+            margin-left: -5.2rem;
             margin-bottom: 0;
         }
     }
@@ -67,6 +69,8 @@
     }
 
     > .text {
+        position: relative;
+        z-index: 60;
         width: 100%;
         height: auto;
         padding-top: 2.4rem;
@@ -83,9 +87,9 @@
 
         @media screen and (min-width: variables.$screen-lg) {
             order: 1;
-            width: 55%;
+            width: calc(50% + 8rem);
             padding-left: 9.2rem;
-            margin-right: -5%;
+            margin-right: -8rem;
             text-align: left;
             background-position: top left 18.8rem;
         }
