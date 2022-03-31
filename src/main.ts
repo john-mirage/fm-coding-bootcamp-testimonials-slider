@@ -31,4 +31,7 @@ const imageSwiper = new Swiper("#slider-image", {
     controller: {
         control: textSwiper,
     },
+    a11y: {
+        notificationClass: "notification",
+    }
 });
