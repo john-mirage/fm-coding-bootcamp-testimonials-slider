@@ -22,6 +22,8 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        padding-left: 7.2rem;
+        padding-right: 7.2rem;
     }
 
     > .pattern {
@@ -47,7 +49,9 @@
 
         @media screen and (min-width: variables.$screen-lg) {
             order: 2;
-            width: 50%;
+            width: 55%;
+            padding-left: 6.4rem;
+            margin-left: -5%;
             margin-bottom: 0;
         }
     }
@@ -78,9 +82,11 @@
 
         @media screen and (min-width: variables.$screen-lg) {
             order: 1;
-            width: 50%;
+            width: 55%;
+            padding-left: 9.2rem;
+            margin-right: -5%;
             text-align: left;
-            background-position: top left 9.6rem;
+            background-position: top left 18.8rem;
         }
     }
 }
